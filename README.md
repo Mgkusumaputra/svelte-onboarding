@@ -22,7 +22,7 @@ There are several criteria for this project, and participants must meet all of t
    {
     name: string,
     email: string,
-    dateOfBirth: string // YYYY-MM-DD,
+    dateOfBirth: string, // YYYY-MM-DD
     age: number,
     gender: "male" | "female",
     isEverUsedSvelte: boolean,
@@ -37,6 +37,7 @@ There are several criteria for this project, and participants must meet all of t
 3. The first component will show the list of items of the store’s value
 4. The second component will show how much of items the `store` has
 5. Both two components have to be different from each other. In other words, there is no relation such as parent or child.
+6. If you have a variable that subscribes to the store, make sure to unsubscribe it when the component is destroyed.
 
 #### Promise
 
@@ -56,5 +57,5 @@ There are several criteria for this project, and participants must meet all of t
 
 1. Never use `@html`, because it can lead to XSS problems. Use it if the content is trusted and there is no other way to accomplish your purpose
 2. Add the default value if the props are required, but omit the default value if the props are optional (not required)
-3. Use keyed each block if you want to manipulate the item of the list and use the ID of the item as a key
+3. Use keyed each block if you want to manipulate the item of the list and use the `ID` of the item as a key
 4. Avoid inline handler
