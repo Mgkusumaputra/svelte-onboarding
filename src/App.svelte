@@ -3,8 +3,6 @@
 
   import { datas } from "./stores";
 
-  let genderSelection: string = "Male";
-
   console.log("datas store - datas:", datas);
   console.log("datas store content - $datas:", $datas);
 </script>

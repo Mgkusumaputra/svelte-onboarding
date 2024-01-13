@@ -8,10 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "check-svelte": "svelte-check --fail-on-warnings --tsconfig ./tsconfig.json",
-    "check-lint": "pnpm eslint 'src/**/*.{ts,svelte}'",
-    "check-format": "pnpm prettier 'src/**/*.{ts,css,svelte}' --check",
-    "fix-lint": "pnpm eslint --fix 'src/**/*.{ts,svelte}'",
-    "fix-format": "pnpm prettier 'src/**/*.{ts,css,svelte}' --write"
+    "check-lint": "pnpm eslint src/**/*.{ts,svelte}",
+    "check-format": "pnpm prettier src/**/*.{ts,css,svelte} --check",
+    "fix-lint": "pnpm eslint --fix src/**/*.{ts,svelte}",
+    "fix-format": "pnpm prettier src/**/*.{ts,css,svelte} --write",
+    "check-all": "pnpm check-svelte && pnpm check-lint && pnpm check-format",
+    "fix-all": "pnpm fix-lint && pnpm fix-format"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.1",

@@ -6,7 +6,6 @@
     Checkbox,
     Textarea,
     Button,
-    P,
   } from "flowbite-svelte";
   import { DateInput } from "date-picker-svelte";
 
@@ -32,7 +31,7 @@
   }
 
   let dateInput = new Date();
-  function formatDate(date: any) {
+  function formatDate(date: string | number | Date) {
     var d = new Date(date),
       month = "" + (d.getMonth() + 1),
       day = "" + d.getDate(),
@@ -151,7 +150,7 @@
 
 <div class="flex flex-col text-center gap-3 mt-5">
   <p>Data Length: {totalDatas}</p>
-  {#each datas as data, index (data.id)}
+  {#each datas as data (data.id)}
     <p>
       {data.id}.
       <b>Name:</b>
